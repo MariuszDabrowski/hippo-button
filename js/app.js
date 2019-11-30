@@ -27,3 +27,14 @@ button.addEventListener('mouseleave', leaveButton);
 
 function enterButton() { mouthOpen.play(); }
 function leaveButton() { mouthOpen.reverse(); }
+
+// ----------
+// Ear wiggle
+// ----------
+
+const earWiggle = gsap.timeline({ paused: true, repeat: 2 });
+earWiggle.set('.ear-right', { transformOrigin:"center center" });
+earWiggle.to('.ear-right', {duration: 0.1, rotation: 45});
+earWiggle.to('.ear-right', {duration: 0.1, rotation: 0});
+
+window.setInterval(() => earWiggle.play(0), 2500);
