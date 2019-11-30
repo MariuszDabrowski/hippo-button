@@ -21,12 +21,26 @@
         <g class="eye-right">
           <path class="eye-right-outer" d="M174.9,27H186c0-0.3,0-0.7,0-1c0-14.4-11.6-26-26-26c-14.4,0-26,11.6-26,26 c0,0.3,0,0.7,0,1h6.1H174.9z"/>
           <path class="eye-right-inner" d="M175,25c0-11-7.8-20-17.5-20S140,14,140,25c0,0.7,0,1.3,0.1,2h34.8 C175,26.3,175,25.7,175,25z"/>
-          <circle class="eye-right-pupil" cx="158" cy="18" r="5"/>
+          <defs>
+            <clipPath id="eye-right-clip" fill="#ffffff">
+              <path d="M175,25c0-11-7.8-20-17.5-20S140,14,140,25c0,0.7,0,1.3,0.1,2h34.8 C175,26.3,175,25.7,175,25z"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#eye-right-clip)">
+            <circle class="eye-right-pupil" cx="158" cy="18" r="5"/>
+          </g>
         </g>
         <g class="eye-left">
           <path class="eye-left-outer" d="M96.9,27h6.1c0-0.3,0-0.7,0-1c0-14.4-11.6-26-26-26C62.6,0,51,11.6,51,26 c0,0.3,0,0.7,0,1h11.1H96.9z"/>
           <path class="eye-left-inner" d="M97,25c0-11-7.8-20-17.5-20S62,14,62,25c0,0.7,0,1.3,0.1,2h34.8C97,26.3,97,25.7,97,25z" />
-          <circle class="eye-left-pupil" cx="80" cy="17.7" r="5"/>
+          <defs>
+            <clipPath id="eye-left-clip">
+              <path d="M97,25c0-11-7.8-20-17.5-20S62,14,62,25c0,0.7,0,1.3,0.1,2h34.8C97,26.3,97,25.7,97,25z" />
+            </clipPath>
+          </defs>
+          <g clip-path="url(#eye-left-clip)">
+            <circle class="eye-left-pupil" cx="80" cy="17.7" r="5"/>
+          </g>
         </g>
       </g>
       <g class="nostrils">
