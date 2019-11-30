@@ -1,0 +1,20 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #1e313f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 242px;
+}
