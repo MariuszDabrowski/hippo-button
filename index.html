@@ -45,7 +45,12 @@
         <circle class="freckle" cx="20.1" cy="44.7" r="1.6"/>
         <circle class="freckle" cx="19.6" cy="37.8" r="1.6"/>
       </g>
-      <g class="mouth">
+      <defs>
+        <clipPath id="mouthClip">
+          <path fill="#ffffff" d="M218,98H24C10.8,98,0,87.2,0,74V51c0-13.2,10.8-24,24-24h194c13.2,0,24,10.8,24,24v23 C242,87.2,231.2,98,218,98z"/>
+        </clipPath>
+      </defs> 
+      <g class="mouth" clip-path="url(#mouthClip)">
         <g class="mouth-pieces">
           <path class="mouth-back" d="M23.6,168.2l-3-56.1c0-7.8,6.4-14.1,14.1-14.1h172.4c7.8,0,14.1,6.4,14.1,14.1l-3,56.1"/>
           <path class="tongue" d="M174.9,168.2c-7.3-5-24.5-9.9-54.8-9.9s-48,5.1-54.8,9.9"/>
