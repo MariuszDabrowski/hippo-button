@@ -2,9 +2,9 @@
 // Hover animaton
 // --------------
 
-const mouthSpeed = 1;
+const mouthSpeed = 0.3;
 const easeType = Power2.easeOut;
-const mouthOpen = gsap.timeline({ repeat: -1 });
+const mouthOpen = gsap.timeline({ paused: true });
 mouthOpen.to('.mouth-back', {duration: mouthSpeed, ease: easeType, y: -70}, 0);
 mouthOpen.to('.tongue', {duration: mouthSpeed * 1.5, ease: easeType, y: -70}, 0);
 mouthOpen.to('.teeth', {duration: mouthSpeed, ease: easeType, y: -70, scaleY: 1.2}, 0);
@@ -15,3 +15,15 @@ mouthOpen.to('.eye-right', {duration: mouthSpeed, ease: easeType, x: -2}, 0);
 mouthOpen.to('.eye-left', {duration: mouthSpeed, ease: easeType, x: 2}, 0);
 mouthOpen.to('.eyes', {duration: mouthSpeed, ease: easeType, y: 2}, 0);
 mouthOpen.to('.nostrils', {duration: mouthSpeed, ease: easeType, y: -6}, 0);
+
+// ------------
+// Mouse events
+// ------------
+
+const button = document.querySelector('button');
+
+button.addEventListener('mouseenter', enterButton);
+button.addEventListener('mouseleave', leaveButton);
+
+function enterButton() { mouthOpen.play(); }
+function leaveButton() { mouthOpen.reverse(); }
